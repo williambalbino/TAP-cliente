@@ -1,0 +1,9 @@
+<div *ngIf="clientes.length === 0">
+  <h3>Não há clientes cadastrados</h3>
+</div>
+<div *ngIf="clientes.length > 0">
+  <h3>Clientes Cadastrados</h3>
+  <ul>
+    <li *ngFor="let c of clientes">{{c.nome}} {{c.id}} <button (click)="ver(c)">Ver</button></li>
+  </ul>
+</div>
